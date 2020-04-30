@@ -30,6 +30,6 @@ In probemon.py: Change the node name by changing AP1
 In batch_upload: Set the node name by changing AP1  
 
 Execute crontab -e and insert the following lines:  
-*/2 0-2,4-23 * * * /bin/bash -c [full path to probe] #Triggers the detection every 2 minutes except at 3am  
+\*/2 0-2,4-23 * * * /bin/bash -c [full path to probe] #Triggers the detection every 2 minutes except at 3am  
 0 3 * * * /bin/bash -c [full path to batch_upload] #Allows for batch uploading at 3am  
 50 3 * * * rm /home/pi/probemon/logs/* #Wipes all the logs for the day at 3am  
