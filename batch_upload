@@ -1,0 +1,5 @@
+#!/usr/bin/env  bash
+
+output_file=AP1-batch-$(date +%Y%m%d)
+
+~/Dropbox-Uploader/dropbox_uploader.sh upload ~/probemon/logs /OutputCSV/$output_file
