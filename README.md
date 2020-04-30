@@ -1,7 +1,7 @@
 # detectwifi
 
 This version will be deployed at Amoy Quee Camp as part of tracking efforts during COVID-19.
-Steps to install this system:
+Steps to install this system: 
 After running the usual apt-get update & upgrades, we will need to change the system to kali headers in order to set the Wifi Modules to monitor mode.
 
 cd /usr/local/src
