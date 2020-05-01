@@ -1,5 +1,9 @@
 #!/usr/bin/env  bash
 
+sudo service ntp stop 
+sudo ntpd -gq
+sudo service ntp start
+
 output_file=AP1-$(date +%Y%m%d_%H-%M)
 
 sudo airmon-ng start wlan0	
