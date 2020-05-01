@@ -2,19 +2,9 @@
 
 output_file=AP1-$(date +%Y%m%d_%H-%M)
 
-{
-	sleep 60
-	sudo pkill python
-	sudo airmon-ng stop wlan0mon
-	sudo ifconfig wlan0 up
-	sleep 15	
-	~/Dropbox-Uploader/dropbox_uploader.sh upload ~/probemon/logs/$output_file.csv /OutputCSV/$output_file.csv	
-} &
-
-counter=$1
-while $counter
-do
-	counter=$(($counter - 1))
-	sudo airmon-ng start wlan0	
-	sudo python ~/probemon/probemon.py -i wlan0mon -t unix -o ~/probemon/logs/$output_file.csv -f -r -l
-done
+sudo airmon-ng start wlan0	
+sudo python ~/probemon/probemon.py -i wlan0mon -t unix -o ~/probemon/logs/$output_file.csv -f -r -l
+sudo airmon-ng stop wlan0mon
+sudo ifconfig wlan0 up
+sleep 15	
+~/Dropbox-Uploader/dropbox_uploader.sh upload ~/probemon/logs/$output_file.csv /OutputCSV/$output_file.csv	
