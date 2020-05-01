@@ -18,7 +18,11 @@ sudo python setup.py install
 
 git clone https://github.com/secdev/scapy.git  
 cd scapy  
-sudo python setup.py install  
+sudo python setup.py install
+
+Set up the dropbox uploader:  
+git clone https://github.com/andreafabrizi/Dropbox-Uploader.git  
+Run it once and then generate the access key to put into the script.  
 
 Now go into the downloaded repository and do the following edits:  
 Go to cmd and run ifconfig.  
