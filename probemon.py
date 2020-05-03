@@ -93,7 +93,7 @@ def main():
 	built_packet_cb = build_packet_callback(args.time, logger, 
 		args.delimiter, args.mac_info, args.ssid, args.rssi)
 	
-	sniff(iface=args.interface, prn=built_packet_cb, store=0, timeout=300)
+	sniff(iface=args.interface, prn=built_packet_cb, store=0, timeout=290)
 	sys.exit(-1)
 
 if __name__ == '__main__':
