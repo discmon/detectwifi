@@ -1,6 +1,6 @@
 #!/usr/bin/env  bash
 
-output_file=AP1-$(date +%Y%m%d_%H-%M)
+output_file=testing-$(date +%Y%m%d_%H-%M)
 
-sudo python ~/probemon/probemon.py -i wlan0mon -t unix -o ~/probemon/logs/$output_file.csv -f -r -l
+sudo python ~/probemon/probemon.py -i wlp2s0mon -t unix -o ~/probemon/logs/$output_file.csv -f -r -l
 	

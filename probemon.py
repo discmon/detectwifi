@@ -38,7 +38,7 @@ def build_packet_callback(time_fmt, logger, delimiter, mac_info, ssid, rssi):
 		fields.append(str(log_time))
 
 		#TO BE CHANGED WHEN DEPLOYED
-            	fields.append("AP1")
+            	fields.append("Testing")
 		# append the mac address itself
 		fields.append(str(packet.addr2))
 	

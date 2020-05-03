@@ -39,8 +39,10 @@ In probemon.py: Change the node name by changing AP1
 In batch_upload: Set the node name by changing AP1  
 
 Execute crontab -e and insert the following lines:  
-\*/3 0-2,4-23 * * * /bin/bash -c [full path to probe] #Triggers the detection every 2 minutes except at 3am  
-0 3 * * * /bin/bash -c [full path to batch_upload] #Allows for batch uploading at 3am  
+@reboot sudo airmon-ng start [wifi interface]  
+\*/5 0-2,4-23 * * * /bin/bash -c [full path to probe]  
+*/5 * * * * /bin/bash -c [full path to batch_upload]  
 50 3 * * * rm [full path to probemon]/logs/* #Wipes all the logs for the day at 3am  
-Due to instability need to reboot to refresh the system
+
+Due to instability need to reboot to refresh the system  
 0 4,8,12,16,20,0 * * * sudo reboot 
