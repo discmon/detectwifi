@@ -2,5 +2,4 @@
 
 output_file=testing-$(date +%Y%m%d_%H-%M)
 
-sudo python ~/probemon/probemon.py -i wlp2s0mon -t unix -o ~/probemon/logs/$output_file.csv -f -r -l
-	
+sudo python ~/detectwifi/probemon.py -i wlp2s0mon -t unix -o ~/detectwifi/logs/$output_file.csv -f -r -l
