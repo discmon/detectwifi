@@ -2,4 +2,4 @@
 
 output_file=testing
 
-~/Dropbox-Uploader/dropbox_uploader.sh -s upload ~/probemon/logs/* /OutputCSV/$output_file/
+~/Dropbox-Uploader/dropbox_uploader.sh -s upload ~/detectwifi/logs/* /OutputCSV/$output_file/
