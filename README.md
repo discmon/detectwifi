@@ -1,6 +1,5 @@
 # detectwifi
-
-This version will be deployed at Amoy Quee Camp as part of tracking efforts during COVID-19.  
+  
 Steps to install this system:  
 After running the usual apt-get update & upgrades, we will need to change the system to kali headers in order to set the Wifi Modules to monitor mode.
 
@@ -41,7 +40,7 @@ In batch_upload: Set the node name by changing AP1
 Execute crontab -e and insert the following lines:  
 @reboot sudo airmon-ng start [wifi interface]  
 \*/5 0-2,4-23 * * * /bin/bash -c [full path to probe]  
-*/5 * * * * /bin/bash -c [full path to batch_upload]  
+\*/5 * * * * /bin/bash -c [full path to batch_upload]  
 50 3 * * * rm [full path to probemon]/logs/* #Wipes all the logs for the day at 3am  
 
 Due to instability need to reboot to refresh the system  
