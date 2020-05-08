@@ -13,6 +13,8 @@ Set visudo to not require password:
 sudo visudo  
 username	ALL=(ALL) NOPASSWD:ALL  
 
+Use apt to install the following software:  
+python git python-setuptools ntp net-tools  
 
 Set up the environment:  
 sudo apt-get install aircrack-ng python git python-setuptools net-tools ntp  
