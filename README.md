@@ -19,13 +19,17 @@ python git python-setuptools ntp net-tools
 Set up the environment:  
 sudo apt-get install aircrack-ng python git python-setuptools net-tools ntp  
 git clone https://github.com/drkjam/netaddr  
+
+Before installing netaddr, there is a need to upgrade to the latest IEEE OUI database  
+Download the CSV file from https://standards.ieee.org/content/ieee-standards/en/products-services/regauth/index.html, specifically IEEE MA-L Assignments (.csv)  
+Under the Mod folder, rename the file as oui.csv and save it in the Mod folder  
+Execute converter.py to convert the csv file into a txt file that can be accepted into netaddr  
+Copy the output oui.txt file into /netaddr/netaddr/eui/ and delete the existing .idx files  
+Execute ieee.py to rebuild the index files with the new oui files  
+
+After this, install netaddr  
 cd netaddr  
 sudo python setup.py install  
-
-After installing netaddr, there is a need to upgrade to the latest IEEE OUI database  
-Download the txt file from http://http://standards-oui.ieee.org/oui.txt  
-Navigate to /netaddr/eui/ and replace the oui.txt file there with the new file  
-Execute python ieee.py to generate a new oui.idx file for use.  
 
 git clone https://github.com/secdev/scapy.git  
 cd scapy  
