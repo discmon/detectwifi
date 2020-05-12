@@ -22,6 +22,11 @@ git clone https://github.com/drkjam/netaddr
 cd netaddr  
 sudo python setup.py install  
 
+After installing netaddr, there is a need to upgrade to the latest IEEE OUI database  
+Download the txt file from http://http://standards-oui.ieee.org/oui.txt  
+Navigate to /netaddr/eui/ and replace the oui.txt file there with the new file  
+Execute python ieee.py to generate a new oui.idx file for use.  
+
 git clone https://github.com/secdev/scapy.git  
 cd scapy  
 sudo python setup.py install
