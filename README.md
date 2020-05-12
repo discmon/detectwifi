@@ -55,4 +55,7 @@ Execute crontab -e and insert the following lines:
 50 3 * * * rm [full path to probemon]/logs/* #Wipes all the logs for the day at 3am  
 
 Due to instability need to reboot to refresh the system  
-0 4,8,12,16,20,0 * * * sudo reboot 
+0 4,8,12,16,20,0 * * * sudo reboot  
+
+
+test.py in the Mod folder is used to test if MAC addresses are in the database
