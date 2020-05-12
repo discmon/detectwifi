@@ -18,7 +18,7 @@ python git python-setuptools ntp net-tools
 
 Set up the environment:  
 sudo apt-get install aircrack-ng python git python-setuptools net-tools ntp  
-git clone https://github.com/drkjam/netaddr  
+git clone https://github.com/discmon/netaddr  
 
 Before installing netaddr, there is a need to upgrade to the latest IEEE OUI database  
 Download the CSV file from https://standards.ieee.org/content/ieee-standards/en/products-services/regauth/index.html, specifically IEEE MA-L Assignments (.csv)  
@@ -31,12 +31,12 @@ After this, install netaddr
 cd netaddr  
 sudo python setup.py install  
 
-git clone https://github.com/secdev/scapy.git  
+git clone https://github.com/discmon/scapy.git  
 cd scapy  
 sudo python setup.py install
 
 Set up the dropbox uploader:  
-git clone https://github.com/andreafabrizi/Dropbox-Uploader.git  
+git clone https://github.com/discmon/Dropbox-Uploader.git  
 Run it once and then generate the access key to put into the script.  
 
 Now go into the downloaded repository and do the following edits:  
