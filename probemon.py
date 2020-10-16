@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import time
-import datetime
+from datetime import datetime
 import argparse
 import netaddr
 import sys
@@ -33,7 +33,7 @@ def build_packet_callback(time_fmt, logger, delimiter, mac_info, ssid, rssi):
 		# determine preferred time format 
 		log_time = str(int(time.time()))
 		if time_fmt == 'iso':
-			log_time = datetime.datetime.now().isoformat()
+			log_time = datetime.now().isoformat()
 
 		fields.append(str(log_time))
 
@@ -93,7 +93,7 @@ def main():
 	built_packet_cb = build_packet_callback(args.time, logger, 
 		args.delimiter, args.mac_info, args.ssid, args.rssi)
 	
-	sniff(iface=args.interface, prn=built_packet_cb, store=0, timeout=290)
+	sniff(iface=args.interface, prn=built_packet_cb, store=0, timeout=10)
 	sys.exit(-1)
 
 if __name__ == '__main__':

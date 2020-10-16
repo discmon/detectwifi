@@ -2,4 +2,8 @@
 
 output_file=AP1-$(date +%Y%m%d_%H-%M)
 
-sudo python ~/Documents/detectwifi/probemon.py -i wlp3s0mon -t unix -o ~/Documents/detectwifi/logs/$output_file.csv -f -r -l -s
+sudo airmon-ng start wlp3s0
+
+sudo python ~/Documents/detectwifi/probemon.py -i wlp3s0mon -t iso -o ~/Documents/detectwifi/logs/$output_file.csv -f -r -l -s
+
+sudo airmon-ng stop wlp3s0mon
