@@ -22,9 +22,9 @@ def build_packet_callback(time_fmt, logger, delimiter, mac_info, ssid, rssi):
 		if not packet.haslayer(Dot11):
 			return
 
-		# we are looking for management frames with a probe subtype
+		# we are looking for management frames with a probe subtype 0x04 or beacon 0x08
 		# if neither match we are done here
-		if packet.type != 0 or packet.subtype != 0x04:
+		if packet.type != 0 or packet.subtype != 0x08:
 			return
 
 		# list of output fields
